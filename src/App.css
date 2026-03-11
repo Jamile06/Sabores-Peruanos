@@ -1,0 +1,239 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== VARIABLES ===== */
+:root {
+  --rojo: rgba(85, 0, 0, 0.85);
+  --rojo-hover: rgba(120, 0, 0, 0.95);
+  --blanco: #ffffff;
+  --fondo-oscuro: rgba(0, 0, 0, 0.4);
+  --font: 'Georgia', serif;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--blanco);
+}
+
+/* ===== NAV ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--rojo);
+  z-index: 100;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 2rem;
+}
+
+.menu ul li {
+  margin-left: 2rem;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: var(--blanco);
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.menu ul li a.active,
+.menu ul li a:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+/* ===== HOME PAGE ===== */
+.home-page {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--fondo-oscuro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 4rem;
+  background: var(--rojo);
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  border-radius: 50px;
+  letter-spacing: 0.08em;
+}
+
+.buttons {
+  margin-top: 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--rojo);
+  color: var(--blanco);
+  text-decoration: none;
+  padding: 1.1rem 3rem;
+  margin: 0 1rem;
+  border-radius: 50px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--rojo-hover);
+}
+
+/* ===== HORARIOS PAGE ===== */
+.schedule-page {
+  background: #ffffff;
+  min-height: 100vh;
+  color: #000;
+}
+
+.schedule-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 100px auto 50px;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.schedule-content .text {
+  flex: 1 1 400px;
+  padding: 1rem;
+}
+
+.schedule-content .text h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.schedule-content .text p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #333;
+}
+
+.schedule-content .text a {
+  color: #550000;
+  text-decoration: underline;
+}
+
+.schedule-content .image {
+  flex: 1 1 300px;
+  padding: 1rem;
+}
+
+.schedule-content .image img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* ===== CARTA PAGE ===== */
+.menu-page {
+  background: #f5f5f5;
+  color: #333;
+  min-height: 100vh;
+}
+
+.menu-content {
+  max-width: 900px;
+  margin: 100px auto 50px;
+  padding: 1rem;
+}
+
+.menu-content h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #550000;
+}
+
+.menu-section {
+  margin-bottom: 2.5rem;
+}
+
+.menu-section h2 {
+  font-size: 2.2rem;
+  border-bottom: 2px solid #550000;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: #550000;
+}
+
+.menu-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.menu-section ul li {
+  padding: 0.8rem 0;
+  font-size: 1.5rem;
+  border-bottom: 1px dashed #ccc;
+  color: #444;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 1.2rem 0;
+  background: #550000;
+  color: #fff;
+  width: 100%;
+  font-size: 1rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu ul li {
+    margin: 0.5rem 0;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .buttons .btn {
+    display: block;
+    margin: 0.5rem auto;
+    width: fit-content;
+  }
+
+  .schedule-content {
+    flex-direction: column;
+    margin-top: 80px;
+  }
+}
